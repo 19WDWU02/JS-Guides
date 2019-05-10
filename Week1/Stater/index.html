@@ -64,7 +64,7 @@
                         If statments are a way to introduce logic into your code.<br>
                         They can be used to make conditions in youd code so things can have differnt outcomes based off the variables used.<br>
                         If statments can be used alone, or with an else statment. This alows the if statment to guarantee a result whether it is true or false.<br>
-                        Look at script.js line __X__ for some more examples.
+                        Look at script.js line 18 for some more examples.
                     </p>
                     <pre class="codeBlock"><code class="language-js">
                         if (variableNumber == 1) {
@@ -88,7 +88,7 @@
                         There are two types of operators. Setting operators and checking operators.<br>
                         Setting operators are used for setting / changing information.<br>
                         And checking operators are used to check 2 variables and will always return true or false.<br>
-                        Look at script.js line __X__ for some more examples.
+                        Look at script.js line 28 for some more examples.
                     </p>
                     <pre class="codeBlock"><code class="language-js">
                         // Setting operators
@@ -97,24 +97,102 @@
                         - // Subtracts 2 NUMBER values from each other
                         / // Divides 2 NUMBER values from each other
                         * // Multiplies 2 NUMBER values from each other
+                        % // Gives the left over value when given 2 NUMBERS
 
                         // Checking operators
                         ==  // Checks if the 2 values have the same value
                         === // Checks is the 2 values have the same value AND the same data type
-                        <=  // Checks if the value on the left is less than the value on the right
-                        >=  // Checks if the value on the left is greater than the value on the right
+                        <   // Checks if the value on the left is less than the value on the right
+                        <=  // Checks if the value on the left is less than or equle to the value on the right
+                        >   // Checks if the value on the left is greater than the value on the right
+                        >=  // Checks if the value on the left is greater than or equle to the value on the right
                         !=  // Checks if the 2 values DO NOT equle each other
                         !== // Checks if the 2 values DO NOT equle each other AND are not the same data type
                     </code></pre>
                 </div>
                 <hr>
+                <div id="parseInt">
+                    <h2>parseInt</h2>
+                    <p>
+                        parseInt is used to turn an alone number in a string variable, into a number variable.<br>
+                        This is useful because the value that we get from a promp is always a string value and if we try to add a number to a string value we get a bigger string, rather than a bigger number.<br>
+                        Look at script.js line __X__ for some more examples.
+                    </p>
+                    <pre class="codeBlock"><code class="language-js">
+                        var total = "5" + 5;
+                        // total is now equle to "55"
+                        var newNumber = parseInt("5");
+                        total = newNumber + 5;
+                        // total is now equle to 10
+                    </code></pre>
+                </div>
+                <hr>
                 <h2>Tuesday</h2>
                 <br>
-                <h2>For loops</h2>
-                <p>
-                    JS loops is a way to loop over an array to get or change their values.<br>
-                    The logic for a for loop is contained in the brackets
-                </p>
+                <div id="forLoops">
+                    <h2>For loops</h2>
+                    <p>
+                        JS loops is a way to loop over an array to get or change their values.<br>
+                        The logic for a for loop is contained in the brackets and is made up of a variable being defined, a condition (like an if statment) and a iterator.<br>
+                        Look at script.js line __X__ for some more examples.
+                    </p>
+                    <pre class="codeBlock"><code class="language-js">
+                        var days = ["Monday", "Tuesday", "Wednesday"];
+
+                        for (var i = 0; i < days.length; i++) {
+                            console.log(days[i]);
+                        }
+                    </code></pre>
+                </div>
+                <hr>
+                <div id="dimensionalArray">
+                    <h2>Multi-dimensional arrays</h2>
+                    <p>
+                        Multi-dimensional arrays are storing arrays within arrays.<br>
+                        They can be really useful when needing to store a lsit of infoatmion, where each item on that list also has a list of information.<br>
+                        Look at script.js line __X__ for some more examples.
+                    </p>
+                    <pre class="codeBlock"><code class="language-js">
+                        var days = ["Monday", "Tuesday", "Wednesday"];
+                        var tasks = [
+                            ["Cooking", "Cleaning"],
+                            ["Vacuuming"],
+                            ["Working", "Coding", "Writing"]
+                        ];
+
+                        for (var i = 0; i < days.length; i++) {
+                            console.log(days[i])
+                            for (var a = 0; a < tasks[i].length; a++) {
+                                console.log(tasks[i][a]);
+                            }
+                        }
+
+                        // This would output:
+                        // Monday
+                        // Cooking
+                        // Cleaning
+                        // Tuesday
+                        // Vacuuming
+                        // Wednesday
+                        // Working
+                        // Coding
+                        // Writing
+                    </code></pre>
+                </div>
+                <hr>
+                <div id="functions">
+                    <h2>Functions</h2>
+                    <p>
+                        Functions are used when you have code that gets used multable times.<br>
+                        This is really useful because it means that you don't have to write out the same piece of code multiple times.<br>
+                        Look at script.js line __X__ for some more examples.
+                    </p>
+                    <pre class="codeBlock"><code class="language-js">
+                        function newFunction () {
+                            console.log("Every time this function is called, I get added to the console!");
+                        }
+                    </code></pre>
+                </div>
             </div>
         </div>
 
