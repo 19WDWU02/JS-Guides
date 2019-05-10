@@ -6,43 +6,119 @@
         <title>Starting with JS</title>
 
         <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/prism.css">
     </head>
     <body>
         <div class="container">
             <h1>JavaScript Intro</h1>
             <hr>
-            <div class="">
-                <h2>Console and Alert</h2>
-                <p>
-                    Both the console.log() and the alert() function are developer tools to help us with our website development.<br>
-                    Console.log(); will log a message into your browsers console. You can do this with any dataType which we will and have be using.<br>
-                    Look at script.js line 1 for an example.
-                </p>
-                <p>
-                    An Alert displays an alert box with a message which we specify. You can only view a string dataType inside of an alert.<br>
-                    alert(); will pause all the javascript and won't continue until the user clicks the ok button.<br>
-                    Look at script.js line 3 for an example.
-                </p>
+            <div>
+                <h2>Monday</h2>
+                <br>
+                <div id="console">
+                    <h2>Console and Alert</h2>
+                    <p>
+                        Both the console.log() and the alert() function are developer tools to help us with our website development.<br>
+                        Console.log(); will log a message into your browsers console. You can do this with any dataType which we will and have be using.<br>
+                        Look at script.js line 2 for an example.
+                    </p>
+                    <p>
+                        An Alert displays an alert box with a message which we specify. You can only view a string dataType inside of an alert.<br>
+                        alert(); will pause all the javascript and won't continue until the user clicks the ok button.<br>
+                        Look at script.js line 4 for an example.
+                    </p>
+                    <pre class="codeBlock"><code class="language-js">
+                        console.log("This is logging in the console");
+                        alert("This alert will pause everything from running until I am clicked");
+                    </code></pre>
+                </div>
                 <hr>
-                <h2>Variables</h2>
+                <div id="variables">
+                    <h2>Variables</h2>
+                    <p>
+                        A JS variable are containers for a dataTypes value. They can hold any data Type value which can then be reused later on in the script.<br>
+                        When you first use a JS variable, you are to declare it by using saying var, followed by the the variable name.<br>
+                        There are a few rules when creating a JS variable.<br>
+                        They:
+                    </p>
+                    <ul>
+                        <li>Cannot contain Spaces</li>
+                        <li>They cannot just be a number</li>
+                        <li>Must either begin with a letter, underscore or dollar sign</li>
+                        <li>Variables are case-sensitive</li>
+                        <li>There is a list of words you cannot be used - <a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">Reserved Words</a></li>
+                        <li>Ideally your nameing should describe whatever variable is holding</li>
+                    </ul>
+                    <br>
+                    <p>Look at script.js line 8 for some more examples.</p>
+                    <pre class="codeBlock"><code class="language-js">
+                        var variableNumber = 1;
+                        var variableString = "This is a string";
+                        var variableArray = ["Item 1", 2, false, "Item 4"];
+                    </code></pre>
+                </div>
+                <hr>
+                <div id="ifElse">
+                    <h2>If and else statments</h2>
+                    <p>
+                        If statments are a way to introduce logic into your code.<br>
+                        They can be used to make conditions in youd code so things can have differnt outcomes based off the variables used.<br>
+                        If statments can be used alone, or with an else statment. This alows the if statment to guarantee a result whether it is true or false.<br>
+                        Look at script.js line __X__ for some more examples.
+                    </p>
+                    <pre class="codeBlock"><code class="language-js">
+                        if (variableNumber == 1) {
+                            console.log("variableNumber is equle to 1");
+                        }
+                        // This will only run if variableNumber is equle to 1
+
+                        if (variableNumber == 1) {
+                            variableNumber = 2;
+                        } else {
+                            variableNumber = 6;
+                        }
+                        // if variableNumber is equle 1, it will then be changed to 2
+                        // However this time if variableNumber does not equle 1, variableNumber will be set to 6;
+                    </code></pre>
+                </div>
+                <hr>
+                <div id="operators">
+                    <h2>Operators</h2>
+                    <p>
+                        There are two types of operators. Setting operators and checking operators.<br>
+                        Setting operators are used for setting / changing information.<br>
+                        And checking operators are used to check 2 variables and will always return true or false.<br>
+                        Look at script.js line __X__ for some more examples.
+                    </p>
+                    <pre class="codeBlock"><code class="language-js">
+                        // Setting operators
+                        = // Sets the variable on the left, to a new value on the right
+                        + // Adds the 2 values on each side to each other
+                        - // Subtracts 2 NUMBER values from each other
+                        / // Divides 2 NUMBER values from each other
+                        * // Multiplies 2 NUMBER values from each other
+
+                        // Checking operators
+                        ==  // Checks if the 2 values have the same value
+                        === // Checks is the 2 values have the same value AND the same data type
+                        <=  // Checks if the value on the left is less than the value on the right
+                        >=  // Checks if the value on the left is greater than the value on the right
+                        !=  // Checks if the 2 values DO NOT equle each other
+                        !== // Checks if the 2 values DO NOT equle each other AND are not the same data type
+                    </code></pre>
+                </div>
+                <hr>
+                <h2>Tuesday</h2>
+                <br>
+                <h2>For loops</h2>
                 <p>
-                    A JS variable are containers for a dataTypes value. They can hold any data Type value which can then be reused later on in the script.<br>
-                    When you first use a js variable, you are to declare it by using saying var, followed by the the variable name.<br>
-                    There are a few rules when creating a JS variable.<br>
-                    They
+                    JS loops is a way to loop over an array to get or change their values.<br>
+                    The logic for a for loop is contained in the brackets
                 </p>
-                <ul>
-                    <li>Cannot contain Spaces</li>
-                    <li>They cannot just be a number</li>
-                    <li>Must either begin with a letter, underscore or dollar sign</li>
-                    <li>Variables are case-sensitive</li>
-                    <li>There is a list of words you cannot be used - <a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">Reserved Words</a></li>
-                    <li>Ideally your nameing should describe whatever variable is holding</li>
-                </ul>
-                <p>Look at script.js line 5 for variable examples</p>
             </div>
         </div>
 
+        <script type="text/javascript" src="../../js/prism.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>
