@@ -185,13 +185,120 @@
                     <p>
                         Functions are used when you have code that gets used multable times.<br>
                         This is really useful because it means that you don't have to write out the same piece of code multiple times.<br>
+                        Functions can be called by typing the function name with opening and closing brackets<br>
                         Look at script.js line __X__ for some more examples.
                     </p>
                     <pre class="codeBlock"><code class="language-js">
                         function newFunction () {
                             console.log("Every time this function is called, I get added to the console!");
                         }
+
+                        newFunction();
                     </code></pre>
+                    <br>
+                    <p>
+                        Using the brackets, we can also parse variables into the function to be used.<br>
+                        Doing this, allows us to be able to use the same piece of code for multable use cases<br>
+                        Look at script.js line __X__ for some more examples.
+                    </p>
+                    <pre class="codeBlock"><code class="language-js">
+                        function someMath (num1, num2) {
+                            console.log(num1 + num2);
+                        }
+
+                        someMath(2, 5);
+                        // Would log 7
+
+                        someMath(6, 11);
+                        // Would log 17
+
+                        someMath(378, 1911);
+                        // Would log 2289
+                    </code></pre>
+                    <br>
+                    <p>
+                        Functions can also have a return value.<br>
+                        The return does 2 things:
+                        <ul>
+                            <li>Stops the function from running any further when it is reached</li>
+                            <li>Gives back a value if a value is supplied</li>
+                        </ul>
+                    </p>
+                    <pre class="codeBlock"><code class="language-js">
+                        function someMoreMath (num1, num2) {
+                            return num1 * num2;
+                        }
+
+                        console.log(someMoreMath(2, 5));
+                        // Would log 10
+
+                        console.log(someMoreMath(6, 11));
+                        // Would log 66
+
+                        console.log(someMoreMath(378, 1911));
+                        // Would log 722358
+                    </code></pre>
+                </div>
+                <hr>
+                <h2>Wednesday</h2>
+                <br>
+                <div id="scopes">
+                    <h2>Scopes</h2>
+                    <p>
+                        There are 2 kinds of scopes. Gloabl and local.<br>
+                        The global scope is when a variable or function is declared outside of another function.<br>
+                        Global variables and functions can be used inside any other functions.<br>
+                        And the local scope is when a variable or function is declared inside a funciton. When this happens, that variable or function can only be used inside that function.<br>
+                        Look at script.js line __X__ for some more examples.
+                        <pre class="codeBlock"><code class="language-js">
+                            var globalVariable = "I am a global variable";
+
+                            function coolFunction () {
+                                console.log(globalVariable);
+                            }
+                            coolFunction();
+                            // This will log I am a global variable
+
+                            function anotherCoolFunction () {
+                                var localVariable = "I am a local variable";
+                                console.log(localVariable);
+                            }
+                            anotherCoolFunction();
+                            console.log(localVariable);
+
+                            // This will log I am a local variable first because we are calling the anotherCoolFunction function
+                            // But will then log an error because we are trying to get a variable that can only be used inside the anotherCoolFunction function
+
+                        </code></pre>
+                    </p>
+                </div>
+                <hr>
+                <h2>Friday</h2>
+                <br>
+                <div id="objects">
+                    <h2>Objects</h2>
+                    <p>
+                        Objects are like arrays, but you can give the information inside the object a name.<br>
+                        This can be very useful because because you dont have to remember where abouts in the array the value that you want is. You can just call the name.<br>
+                        The other useful thing about objects is that you can put functions inside of them. These are called methods.<br>
+                        Look at script.js line __X__ for some more examples.
+                        <pre class="codeBlock"><code class="language-js">
+                            var person = {
+                                firstName: "Tom",
+                                lastName: "Brown",
+                                age: 23,
+                                fullName: function () {
+                                    return this.firstName + " " + this.lastName;
+                                }
+                            }
+
+                            console.log(person.firstName);
+                            // Will log Tom
+
+                            console.log(person.fullName());
+                            // Will log Tom Brown
+                        </code></pre>
+                    </p>
                 </div>
             </div>
         </div>
