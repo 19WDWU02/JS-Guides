@@ -20,7 +20,7 @@
                     <p>
                         Both the console.log() and the alert() function are developer tools to help us with our website development.<br>
                         Console.log(); will log a message into your browsers console. You can do this with any dataType which we will and have be using.<br>
-                        Look at script.js line 2 for an example.
+                        Look at script.js line 1 for an example.
                     </p>
                     <p>
                         An Alert displays an alert box with a message which we specify. You can only view a string dataType inside of an alert.<br>
@@ -50,11 +50,12 @@
                         <li>Ideally your nameing should describe whatever variable is holding</li>
                     </ul>
                     <br>
-                    <p>Look at script.js line 8 for some more examples.</p>
+                    <p>Look at script.js line 7 for some more examples.</p>
                     <pre class="codeBlock"><code class="language-js">
                         var variableNumber = 1;
                         var variableString = "This is a string";
                         var variableArray = ["Item 1", 2, false, "Item 4"];
+                        console.log(variableString);
                     </code></pre>
                 </div>
                 <hr>
@@ -64,7 +65,7 @@
                         If statments are a way to introduce logic into your code.<br>
                         They can be used to make conditions in youd code so things can have differnt outcomes based off the variables used.<br>
                         If statments can be used alone, or with an else statment. This alows the if statment to guarantee a result whether it is true or false.<br>
-                        Look at script.js line 18 for some more examples.
+                        Look at script.js line 16 for some more examples.
                     </p>
                     <pre class="codeBlock"><code class="language-js">
                         if (variableNumber == 1) {
@@ -88,7 +89,7 @@
                         There are two types of operators. Setting operators and checking operators.<br>
                         Setting operators are used for setting / changing information.<br>
                         And checking operators are used to check 2 variables and will always return true or false.<br>
-                        Look at script.js line 28 for some more examples.
+                        Look at script.js line 30 for some more examples.
                     </p>
                     <pre class="codeBlock"><code class="language-js">
                         // Setting operators
@@ -116,7 +117,8 @@
                     <p>
                         parseInt is used to turn an alone number in a string variable, into a number variable.<br>
                         This is useful because the value that we get from a promp is always a string value and if we try to add a number to a string value we get a bigger string, rather than a bigger number.<br>
-                        Look at script.js line __X__ for some more examples.
+                        EXTRA NOTE: parseInt can also be used to round numbers down to the lowest whole number, though it is not recommended<br>
+                        Look at script.js line 48 for some more examples.
                     </p>
                     <pre class="codeBlock"><code class="language-js">
                         var total = "5" + 5;
@@ -134,7 +136,7 @@
                     <p>
                         JS loops is a way to loop over an array to get or change their values.<br>
                         The logic for a for loop is contained in the brackets and is made up of a variable being defined, a condition (like an if statment) and a iterator.<br>
-                        Look at script.js line __X__ for some more examples.
+                        Look at script.js line 60 for some more examples.
                     </p>
                     <pre class="codeBlock"><code class="language-js">
                         var days = ["Monday", "Tuesday", "Wednesday"];
@@ -150,7 +152,7 @@
                     <p>
                         Multi-dimensional arrays are storing arrays within arrays.<br>
                         They can be really useful when needing to store a lsit of infoatmion, where each item on that list also has a list of information.<br>
-                        Look at script.js line __X__ for some more examples.
+                        Look at script.js line 74 for some more examples.
                     </p>
                     <pre class="codeBlock"><code class="language-js">
                         var days = ["Monday", "Tuesday", "Wednesday"];
@@ -186,7 +188,7 @@
                         Functions are used when you have code that gets used multable times.<br>
                         This is really useful because it means that you don't have to write out the same piece of code multiple times.<br>
                         Functions can be called by typing the function name with opening and closing brackets<br>
-                        Look at script.js line __X__ for some more examples.
+                        Look at script.js line 99 for some more examples.
                     </p>
                     <pre class="codeBlock"><code class="language-js">
                         function newFunction () {
@@ -199,7 +201,7 @@
                     <p>
                         Using the brackets, we can also parse variables into the function to be used.<br>
                         Doing this, allows us to be able to use the same piece of code for multable use cases<br>
-                        Look at script.js line __X__ for some more examples.
+                        Look at script.js line 107 for some more examples.
                     </p>
                     <pre class="codeBlock"><code class="language-js">
                         function someMath (num1, num2) {
@@ -223,6 +225,7 @@
                             <li>Stops the function from running any further when it is reached</li>
                             <li>Gives back a value if a value is supplied</li>
                         </ul>
+                        <p>Look at script.js line 121 for some more examples.</p>
                     </p>
                     <pre class="codeBlock"><code class="language-js">
                         function someMoreMath (num1, num2) {
@@ -249,28 +252,28 @@
                         The global scope is when a variable or function is declared outside of another function.<br>
                         Global variables and functions can be used inside any other functions.<br>
                         And the local scope is when a variable or function is declared inside a funciton. When this happens, that variable or function can only be used inside that function.<br>
-                        Look at script.js line __X__ for some more examples.
-                        <pre class="codeBlock"><code class="language-js">
-                            var globalVariable = "I am a global variable";
-
-                            function coolFunction () {
-                                console.log(globalVariable);
-                            }
-                            coolFunction();
-                            // This will log I am a global variable
-
-                            function anotherCoolFunction () {
-                                var localVariable = "I am a local variable";
-                                console.log(localVariable);
-                            }
-                            anotherCoolFunction();
-                            console.log(localVariable);
-
-                            // This will log I am a local variable first because we are calling the anotherCoolFunction function
-                            // But will then log an error because we are trying to get a variable that can only be used inside the anotherCoolFunction function
-
-                        </code></pre>
+                        Look at script.js line 135 for some more examples.
                     </p>
+                    <pre class="codeBlock"><code class="language-js">
+                        var globalVariable = "I am a global variable";
+
+                        function coolFunction () {
+                            console.log(globalVariable);
+                        }
+                        coolFunction();
+                        // This will log I am a global variable
+
+                        function anotherCoolFunction () {
+                            var localVariable = "I am a local variable";
+                            console.log(localVariable);
+                        }
+                        anotherCoolFunction();
+                        console.log(localVariable);
+
+                        // This will log I am a local variable first because we are calling the anotherCoolFunction function
+                        // But will then log an error because we are trying to get a variable that can only be used inside the anotherCoolFunction function
+
+                    </code></pre>
                 </div>
                 <hr>
                 <h2>Friday</h2>
@@ -281,24 +284,24 @@
                         Objects are like arrays, but you can give the information inside the object a name.<br>
                         This can be very useful because because you dont have to remember where abouts in the array the value that you want is. You can just call the name.<br>
                         The other useful thing about objects is that you can put functions inside of them. These are called methods.<br>
-                        Look at script.js line __X__ for some more examples.
-                        <pre class="codeBlock"><code class="language-js">
-                            var person = {
-                                firstName: "Tom",
-                                lastName: "Brown",
-                                age: 23,
-                                fullName: function () {
-                                    return this.firstName + " " + this.lastName;
-                                }
-                            }
-
-                            console.log(person.firstName);
-                            // Will log Tom
-
-                            console.log(person.fullName());
-                            // Will log Tom Brown
-                        </code></pre>
+                        Look at script.js line 153 for some more examples.
                     </p>
+                    <pre class="codeBlock"><code class="language-js">
+                        var person = {
+                            firstName: "Tom",
+                            lastName: "Brown",
+                            age: 23,
+                            fullName: function () {
+                                return this.firstName + " " + this.lastName;
+                            }
+                        }
+
+                        console.log(person.firstName);
+                        // Will log Tom
+
+                        console.log(person.fullName());
+                        // Will log Tom Brown
+                    </code></pre>
                 </div>
             </div>
         </div>
