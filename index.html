@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/prism.css">
+        <link rel="stylesheet" href="css/main.css">
+
+		<title>JS Guides</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>JS Guides</h1>
+				<p>Welcome to JS Guides. A small document containing the fundamentals of javascript that are <span class="importantKeyword">MUST KNOWS</span> when developing with JavaScript.</p>
+				<p>JavaScript is like any other coding language when it comes to logic. The thing that stands out with JavaScript however is how univercial it can be. It has many elements that can be used for front end web development, app development, server stacks and even game engines.</p>
+			</div>
+			<div class="tabs">
+
+				<div class="tabBtn active" data-tab-num="1">
+					Fundamentals
+				</div>
+				<div class="tabBtn" data-tab-num="2">
+					Selectors
+				</div>
+				<div class="tabBtn" data-tab-num="3">
+					Event listeners
+				</div>
+				<div class="tabBtn" data-tab-num="4">
+					Functions
+				</div>
+				<div class="tabBtn" data-tab-num="5">
+					Loops
+				</div>
+				<div class="tabBtn" data-tab-num="6">
+					DOM
+				</div>
+
+				<!--
+
+				Fundamentals (variables, easy statments)
+				Selectors (document.getElementById etc)
+				Event listeners
+				Functions (named functions, anonymous functions, return value)
+				Loops
+				DOM manipluation
+				Tasks?
+
+			 	-->
+			</div>
+			<div class="contentBox">
+				<div class="content active" id="1">
+					<div id="variables">
+						<h2>Variables</h2>
+	                    <p>
+	                        A JS variable are containers for values. They can hold any type of information that can then be used later on in the script.
+							<br>
+	                        When you first use a JS variable, you are to declare it by using saying var, followed by the the variable name.
+							<br>
+	                        There are a few rules when creating a JS variable.
+							<br>
+	                        They:
+	                    </p>
+	                    <ul>
+	                        <li>Cannot contain Spaces</li>
+	                        <li>They cannot just be a number</li>
+	                        <li>Must either begin with a letter, underscore or dollar sign</li>
+	                        <li>Variables are case-sensitive</li>
+	                        <li>There is a list of words you cannot be used - <a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">Reserved Words</a></li>
+	                        <li>Ideally your nameing should describe whatever variable is holding</li>
+	                    </ul>
+	                    <br>
+	                    <pre class="codeBlock">
+							<code class="language-js">
+								// Number
+								var variableNumber = 1;
+								// String
+								var variableString = "This is a string";
+								// Array
+								var variableArray = ["Item 1", 2, false, "Item 4"];
+	                    	</code>
+						</pre>
+						<br>
+						<p>
+							Variables can also hold more complex information like objects and even HTML elements.
+						</p>
+	                    <pre class="codeBlock">
+							<code class="language-js">
+								// Object
+								var variableObject = {
+									"location": "2 Bunny St, Pipitea, Wellington",
+									"course": "Web anx UX Design",
+									"students": 11
+								};
+								// HTML element
+								var variableArray = document.getElementById('contentBox');
+	                    	</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="variableStates">
+						<h2>Variable States</h2>
+						<p>
+							Variables at their core have two states, true and false.
+							<br>
+							These are determined by the contents of the variable. If the variable contains a value, it is considered true. So if the variable is empty, undefined, null, false or 0 it is then consered as false.
+						</p>
+						<pre class="codeBlock">
+							<code class="language-js">
+								var test1; // false
+								var test2 = 0; // false
+								var test3 = "string"; // true
+								var test4 = 1; // true
+								var test5 = null; // false
+								var test6 = true; // true
+								var test7 = false; // false
+							</code>
+						</pre>
+						<br>
+						<p>
+							These states are only used in variable checking based operations and <span class="importantKeyword">CAN NOT</span> be used as indevidual values.
+						</p>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// This wont trigger because test1 has a false state
+								if (test1) {
+									console.log('Cool!');
+								}
+
+								// This will trigger because test4 has a true state
+								if (test4) {
+									console.log('Cool!');
+								}
+							</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="ifElse">
+						<h2>If and Else Statments</h2>
+	                    <p>
+	                        If statments are a way to introduce logic into your code.
+							<br>
+							At their code, they are checking to see if the condition is true or false. True will trigger the code inside it, and false will skip it. Unless it has an else statment, in which it will then run the code inside the else.
+	                    </p>
+						<pre class="codeBlock">
+							<code class="language-js">
+								if (test4 == 1) {
+									console.log("test4 is equle to 1");
+								}
+								// This will only run if test4 is equle to 1
+
+								if (test4 == 1) {
+									var variableNumber = 2;
+								} else {
+									var variableNumber = 6;
+								}
+								// if test4 is equle 1, variableNumber will then be equle to 2
+								// However this time if test4 does not equle 1, variableNumber will be set to 6
+								hr
+							</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="conditions">
+						<h2>Conditions</h2>
+						<p>
+							Conditions are checks that return true or false. They are used to check if the values on either side of them match their condition.
+							<br>
+							They are mainly used in if statments as they do not need to be set to a variable to return a value.
+						</p>
+						<pre class="codeBlock">
+							<code class="language-js">
+								==  // Checks if the 2 values have the same value
+								=== // Checks is the 2 values have the same value AND the same data type
+								<   // Checks if the value on the left is less than the value on the right
+								<=  // Checks if the value on the left is less than or equle to the value on the right
+								>   // Checks if the value on the left is greater than the value on the right
+								>=  // Checks if the value on the left is greater than or equle to the value on the right
+								!=  // Checks if the 2 values DO NOT equle each other
+								!== // Checks if the 2 values DO NOT equle each other AND are not the same data type
+
+								// Examples
+
+
+
+								// Multi-layer conditions
+
+							</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="multiLayerConditions">
+						<h2>Multi-Layer Conditions</h2>
+						<p>
+							Multi-layer conditions allow you to have multiple conditions inside the same condition.
+							<br>
+							This allows for more advanced checks to happen within a single condition because mroe variables can be used.
+							<br>
+							These are nestable. So an infinate amount can be used within a 'single' condition.
+						</p>
+						<pre class="codeBlock">
+							<code class="language-js">
+								&& // Alows the use of 2 diferent conditions within the same condition
+								|| // Checks if either of the two conditions is true, if at least one of them is, continue.
+
+								// This wont trigger the console log because the second condition has returned false.
+								if (("thing" == "thing") && (1 == 2)) {
+									console.log('Cool!');
+								}
+
+								// This will trigger the console log because it is only looking for one of the conditions to be true.
+								if (("thing" == "thing") || (1 == 2)) {
+									console.log('Cool!');
+								}
+							</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="operators">
+						<h2>Operators</h2>
+	                    <p>
+	                        Operators are used to manipulate values.
+							<br>
+							They can be used to manipulate variables, or just raw data. Like adding two strings togeather in a console log for example.
+	                    </p>
+						<pre class="codeBlock">
+							<code class="language-js">
+								= // Sets the variable on the left, to a new value on the right
+								+ // Adds the 2 values on each side to each other
+								- // Subtracts 2 NUMBER values from each other
+								/ // Divides 2 NUMBER values from each other
+								* // Multiplies 2 NUMBER values from each other
+								% // Gives the left over value when given 2 NUMBERS
+								! // Sets the output of the result to the opposite. ONLY USED on true / false results
+							</code>
+						</pre>
+					</div>
+				</div>
+				<div class="content" id="2">
+					is
+				</div>
+				<div class="content" id="3">
+					a
+				</div>
+				<div class="content" id="4">
+					test
+				</div>
+				<div class="content" id="5">
+					for
+				</div>
+				<div class="content" id="6">
+					tabs
+				</div>
+			</div>
+		</div>
+		<script src="js/prism.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
