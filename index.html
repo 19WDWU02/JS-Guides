@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 		<link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/prism.css">
         <link rel="stylesheet" href="css/main.css">
@@ -239,7 +238,117 @@
 					</div>
 				</div>
 				<div class="content" id="2">
-					is
+					<!-- Not sure about including a description of the document and why its important for selectores. My reason for putting it in is because you can do query selectors of stored elemtns and not just the document. But im not sure if eveyone else needs to know that. -->
+					<!-- <div id="document">
+
+					</div> -->
+					<div id="getElementById">
+						<h2>getElementById</h2>
+						<p>
+							The getElementById function does exactly what it says on the title. It gets an HTML element by the id that is passed as a paramater.
+							<br>
+							Notice how you dont need to include a # in the paramaters. That is because the function is already looking for an ID and nothing else.
+							<br>
+							This will only return a single HTML element to then be used or stored in a variable.
+						</p>
+						<br>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Selecting the element
+								document.getElementById('element');
+								// Storing the element
+								var elementId = document.getElementById('element');
+							</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="getElementsByClassName">
+						<h2>getElementsByClassName</h2>
+						<p>
+							Like getElementById, get<span class="importantKeyword">Elements</span>ByClassName function does exactly what it says in the title. It <span class="importantKeyword">gets</span> all the elements it can find with the passed class name.
+							<br>
+							Also like getElementById, it is only looking at the class names. So you dont have to put a full stop (.) in the paramaters.
+							<br>
+							So while getElementById returns a single HTML element, getElementsByClassName will return an array of elements. Even it it only finds 1 element, it will still be stored in an array format.
+							<br>
+							This means that for access the elements in your JS code, you either have to loop through the array given to you, so select one of the indevidual elemnts.
+						</p>
+						<br>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Selecting the elements
+								document.getElementsByClassName('element');
+								// Storing the element
+								var elementClass = document.getElementsByClassName('element');
+								// Getting the HTML elements to use
+								for (var i = 0; i < elementClass.length; i++;) {
+									// Now we can use this variable for any edits we want to make to the element
+									var currentElement = elementClass[i];
+								}
+							</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="querySelector">
+						<h2>querySelector</h2>
+						<p>
+							The querySelector function is a little different from the other two functions. It can select elements from both id and class. However it can also be used for some mroe advances selections of any HTML attributes, including HTML tags themselves.
+							<br>
+							Unlike getElementsByClassName, querySelector will always return the first element that matches its paramaters. So if you try to select an element by its class name, and there are three elements with the same class name, then it will always return the first one that appears in the HTML code.
+							<br>
+							The catch with using querySelector is that it doesnt know what to look for at first. so you have to tell it what type you are trying to select. It basicly runs off the same type of selecting process as CSS. So a class would start with a full stop (.) and an id query will start with a hashtag (#).
+						</p>
+						<br>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Selecting an id element
+								var queryElementId = document.querySelector('#element');
+								// Selecting a class element
+								var queryElementClass = document.querySelector('.element');
+								// Selecting a HTML tag element
+								var queryElementClass = document.querySelector('h3');
+								// Selecting an image element with a certain src
+								var queryElementImgSrc = document.querySelector('img[src="image/test.png"]');
+							</code>
+						</pre>
+						<br>
+						<p>
+							querySelector is very powerfull. Basicly any type of selection you can do in CSS, will work for querySelector.
+						</p>
+						<br>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Select ancor element with a certain href
+								var queryElementAHref = document.querySelector('a[href="page.html"]');
+								// Select header class with a certain data attribute
+								var queryElementClassData = document.querySelector('.header[data-number="3"]');
+							</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="querySelectorAll">
+						<h2>querySelectorAll</h2>
+						<p>
+							The querySelectorAll function takes all of the advanced selection features of querySelector, and combines it with the return array feature of getElementsByClassName.
+							<br>
+							This can be very usefull if you need to select multiple reagular HTML elements like images that dont all have the same class and process all of them at the same time.
+							<br>
+							Or for example you have a class that changes the color of some text, but you only want to select all h3 elements with this class and none of the other elements that have the red class.
+						</p>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Select all span elements on the page
+								var queryElementH2 = document.querySelectorAll('span');
+								// Select all h3 elements on the page
+								var queryElementH2 = document.querySelectorAll('h3.red');
+								// Getting the HTML elements to use
+								for (var i = 0; i < queryElementH2.length; i++;) {
+									// Now we can use this variable for any edits we want to make to the element
+									var currentElement = queryElementH2[i];
+								}
+							</code>
+						</pre>
+					</div>
 				</div>
 				<div class="content" id="3">
 					a
