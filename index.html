@@ -36,18 +36,6 @@
 				<div class="tabBtn" data-tab-num="6">
 					DOM
 				</div>
-
-				<!--
-
-				Fundamentals (variables, easy statments)
-				Selectors (document.getElementById etc)
-				Event listeners
-				Functions (named functions, anonymous functions, return value)
-				Loops
-				DOM manipluation
-				Tasks?
-
-			 	-->
 			</div>
 			<div class="contentBox">
 				<div class="content active" id="1">
@@ -61,15 +49,16 @@
 	                        There are a few rules when creating a JS variable.
 							<br>
 	                        They:
+							<ul>
+		                        <li>Cannot contain Spaces</li>
+		                        <li>They cannot just be a number</li>
+		                        <li>Must either begin with a letter, underscore or dollar sign</li>
+		                        <li>Variables are case-sensitive</li>
+		                        <li>There is a list of words you cannot be used - <a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">Reserved Words</a></li>
+		                        <li>Ideally your nameing should describe whatever variable is holding</li>
+		                    </ul>
 	                    </p>
-	                    <ul>
-	                        <li>Cannot contain Spaces</li>
-	                        <li>They cannot just be a number</li>
-	                        <li>Must either begin with a letter, underscore or dollar sign</li>
-	                        <li>Variables are case-sensitive</li>
-	                        <li>There is a list of words you cannot be used - <a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank">Reserved Words</a></li>
-	                        <li>Ideally your nameing should describe whatever variable is holding</li>
-	                    </ul>
+
 	                    <br>
 	                    <pre class="codeBlock">
 							<code class="language-js">
@@ -179,13 +168,6 @@
 								>=  // Checks if the value on the left is greater than or equle to the value on the right
 								!=  // Checks if the 2 values DO NOT equle each other
 								!== // Checks if the 2 values DO NOT equle each other AND are not the same data type
-
-								// Examples
-
-
-
-								// Multi-layer conditions
-
 							</code>
 						</pre>
 					</div>
@@ -238,12 +220,8 @@
 					</div>
 				</div>
 				<div class="content" id="2">
-					<!-- Not sure about including a description of the document and why its important for selectores. My reason for putting it in is because you can do query selectors of stored elemtns and not just the document. But im not sure if eveyone else needs to know that. -->
-					<!-- <div id="document">
-
-					</div> -->
 					<div id="getElementById">
-						<h2>getElementById</h2>
+						<h2>Get Element By Id</h2>
 						<p>
 							The getElementById function does exactly what it says on the title. It gets an HTML element by the id that is passed as a paramater.
 							<br>
@@ -263,7 +241,7 @@
 					</div>
 					<hr>
 					<div id="getElementsByClassName">
-						<h2>getElementsByClassName</h2>
+						<h2>Get Elements By Class Name</h2>
 						<p>
 							Like getElementById, get<span class="importantKeyword">Elements</span>ByClassName function does exactly what it says in the title. It <span class="importantKeyword">gets</span> all the elements it can find with the passed class name.
 							<br>
@@ -290,7 +268,7 @@
 					</div>
 					<hr>
 					<div id="querySelector">
-						<h2>querySelector</h2>
+						<h2>Query Selector</h2>
 						<p>
 							The querySelector function is a little different from the other two functions. It can select elements from both id and class. However it can also be used for some mroe advances selections of any HTML attributes, including HTML tags themselves.
 							<br>
@@ -327,7 +305,7 @@
 					</div>
 					<hr>
 					<div id="querySelectorAll">
-						<h2>querySelectorAll</h2>
+						<h2>Query Selector All</h2>
 						<p>
 							The querySelectorAll function takes all of the advanced selection features of querySelector, and combines it with the return array feature of getElementsByClassName.
 							<br>
@@ -352,7 +330,7 @@
 				</div>
 				<div class="content" id="3">
 					<div id="addEventListener">
-						<h2>addEventListener</h2>
+						<h2>Add Event Listener</h2>
 						<p>
 							The addEventListener function allows you to add a custom event to an element. These events will trigger based off the first paramater given, and call the second paramater which ban be a named function or an anonymous function.
 							<br>
@@ -403,7 +381,7 @@
 					</div>
 					<hr>
 					<div id="click">
-						<h2>click</h2>
+						<h2>Click</h2>
 						<p>
 							The click event will trigger whenever the element is clicked. This can be a button, a span or even a div. However, even though that event may new be clickable, it does not change the mouse cursor to the pointer.
 						</p>
@@ -417,7 +395,7 @@
 					</div>
 					<hr>
 					<div id="input">
-						<h2>input</h2>
+						<h2>Input</h2>
 						<p>
 							The input event will trigger whenever an input element has user input. This event is only useful for all the input types, and the textarea HTML elememnts.
 						</p>
@@ -431,7 +409,7 @@
 					</div>
 					<hr>
 					<div id="change">
-						<h2>change</h2>
+						<h2>Change</h2>
 						<p>
 							The change event is very simaler to the input type. However instead of triggering the event when the value is changed, it get triggered when the value is <span class="importantKeyword">finished</span> being changed (or the elemtn losed focus)
 						</p>
@@ -445,7 +423,73 @@
 					</div>
 				</div>
 				<div class="content" id="4">
-					test
+					<div id="functionStructure">
+						<h2>Function Structure</h2>
+						<p>
+							Functions are the main building blocks of almost any coding language. They all pretty much have the same format as well of:
+							<ul>
+								<li>Having the ability to be named or anonymous</li>
+								<li>Having the ability to have paramaters</li>
+								<li>Having their own variable scope</li>
+								<li>Alowing the ability to return a value to be used outside of its self</li>
+							</ul>
+						</p>
+						<br>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Function structure
+								function namedFunction (variable1, variable2) {
+									var newVariable = variable1 + variable2;
+									return newVariable;
+								}
+							</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="paramaters">
+						<h2>Paramaters</h2>
+						<p>
+							The paramaters of a function act just like normal variables. What is special about them is that they can only be used inside the function they are made in and they need to be present when calling the function or else they will call an error.
+							<br>
+							When making the paramaters, you dont need to include the var at the start like a normal variable. doing this will cause an error.
+						</p>
+						<br>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Correct
+								function namedFunction (variable1, variable2) {
+									var newVariable = variable1 + variable2;
+									return newVariable;
+								}
+
+								// Incorrect
+								function namedFunction (var variable1, var variable2) {
+									var newVariable = variable1 + variable2;
+									return newVariable;
+								}
+							</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="return">
+						<h2>Return</h2>
+						<p>
+							The return statment allows the function to return a value to the line that called it. It can also be used for stopping a function early.
+						</p>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Making the function
+								function messageFunction (person, message) {
+									return "Hello " + person + ". " + message;
+								}
+
+								// Storing the functions return value
+								var result = messageFunction('James', 'How are you doing?');
+								console.log(result);
+								// This will output 'Hello James. How are you doing?'
+							</code>
+						</pre>
+					</div>
 				</div>
 				<div class="content" id="5">
 					for
