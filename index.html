@@ -33,9 +33,9 @@
 				<div class="tabBtn" data-tab-num="5">
 					Loops
 				</div>
-				<div class="tabBtn" data-tab-num="6">
+				<!-- <div class="tabBtn" data-tab-num="6">
 					DOM
-				</div>
+				</div> -->
 			</div>
 			<div class="contentBox">
 				<div class="content active" id="1">
@@ -492,11 +492,58 @@
 					</div>
 				</div>
 				<div class="content" id="5">
-					for
+					<div id="loopStructure">
+						<h2>For Loop Structure</h2>
+						<p>
+							The for loop is the simplest way to make a loop in JavaScript. It can be used for many differnet things, but the most common is for iterating over an array.
+							<br>
+							The structure of the for loop is split into 4 parts:
+							<ul>
+								<li>The statment</li>
+								<li>The variable</li>
+								<li>The condition</li>
+								<li>What happens after an iteration</li>
+							</ul>
+							<br>
+							All of these conditions must be met for the for loop to function
+						</p>
+						<br>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Example array
+								var arrayName = ['a', 'b', 'c', 'd'];
+								// For loop example
+								for (var i = 0; i < arrayName.length; i++) {
+									console.log(arrayName[i]);
+								}
+							</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="break">
+						<h2>Break</h2>
+						<p>
+							The break statment is used if you need to stop the loop early. It is recomended to put your break inside an if statment so that your loop doesnt just finish after the first iteration.
+						</p>
+						<br>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Example array
+								var arrayName = ['a', 'b', 'c', 'd'];
+								// For loop example
+								for (var i = 0; i < arrayName.length; i++) {
+									if (arrayName[i] == 'c') {
+										console.log('c is in number ' + i + ' of arrayName');
+									}
+									console.log(arrayName[i]);
+								}
+							</code>
+						</pre>
+					</div>
 				</div>
-				<div class="content" id="6">
+				<!-- <div class="content" id="6">
 					tabs
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<script src="js/prism.js"></script>
