@@ -351,7 +351,98 @@
 					</div>
 				</div>
 				<div class="content" id="3">
-					a
+					<div id="addEventListener">
+						<h2>addEventListener</h2>
+						<p>
+							The addEventListener function allows you to add a custom event to an element. These events will trigger based off the first paramater given, and call the second paramater which ban be a named function or an anonymous function.
+							<br>
+							There are alot of different event types that do different thigns. The list of them all can be found here <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">https://www.w3schools.com/jsref/dom_obj_event.asp</a>
+						</p>
+						<br>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Select an HTML element
+								var element = document.getElementById('content');
+								// Add an event listener structure
+								element.addEventListener(eventType, function);
+							</code>
+						</pre>
+						<br>
+						<p>
+							When assigning a function to the addEventListener, there are two ways to go about it. Adding a named function or adding an anonymous function.
+							<br>
+							When adding a named function, instead of normally adding in the function name and then the brackets, you only need to add the function name. This is because if you add in the brackets, the function will be called even if the event doesnt trigger.
+							<br>
+							The other way is to add an anonymous function. This will allow you to run some code directly inside the event listener. This is also the way that you would use if you needed to pass some paramaters through a function.
+						</p>
+						<br>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Custom function
+								function test () {
+									console.log('This is a console log inside a function');
+								}
+								// Select an HTML element
+								var element = document.getElementById('content');
+								// Add an event listener to run the function
+								element.addEventListener('click', test);
+
+
+								// Another custom function
+								function test2 (message) {
+									console.log(message);
+								}
+								// Select an HTML element
+								var element2 = document.getElementById('content');
+								// Add an event listener to run the function
+								element.addEventListener('click', function(){
+									test2('This is an anonymous function that is sending information to the test2 function')
+								});
+							</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="click">
+						<h2>click</h2>
+						<p>
+							The click event will trigger whenever the element is clicked. This can be a button, a span or even a div. However, even though that event may new be clickable, it does not change the mouse cursor to the pointer.
+						</p>
+						<br>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Add a click event listener
+								element.addEventListener('click', functionName);
+							</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="input">
+						<h2>input</h2>
+						<p>
+							The input event will trigger whenever an input element has user input. This event is only useful for all the input types, and the textarea HTML elememnts.
+						</p>
+						<br>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Add an input event listener
+								element.addEventListener('input', functionName);
+							</code>
+						</pre>
+					</div>
+					<hr>
+					<div id="change">
+						<h2>change</h2>
+						<p>
+							The change event is very simaler to the input type. However instead of triggering the event when the value is changed, it get triggered when the value is <span class="importantKeyword">finished</span> being changed (or the elemtn losed focus)
+						</p>
+						<br>
+						<pre class="codeBlock">
+							<code class="language-js">
+								// Add a change event listener
+								element.addEventListener('change', functionName);
+							</code>
+						</pre>
+					</div>
 				</div>
 				<div class="content" id="4">
 					test
