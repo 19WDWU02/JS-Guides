@@ -8,6 +8,6 @@ This guide includes sections on:
 - Functions
 - Loops
 
-You can check out the guide here: [LINK](LINK)
+You can check out the guide here: [LINK](https://19wdwu02.github.io/JS-Guides/)
 
 Or if you have any suggestions, please open an issue with the suggestion.
