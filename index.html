@@ -13,8 +13,8 @@
 		<div class="container">
 			<div class="header">
 				<h1>JS Guides</h1>
-				<p>Welcome to JS Guides. A small document containing the fundamentals of javascript that are <span class="importantKeyword">MUST KNOWS</span> when developing with JavaScript.</p>
-				<p>JavaScript is like any other coding language when it comes to logic. The thing that stands out with JavaScript however is how univercial it can be. It has many elements that can be used for front end web development, app development, server stacks and even game engines.</p>
+				<p>Welcome to JS Guides. A small document containing the fundamentals of JavaScript that are <span class="importantKeyword">MUST KNOWS</span> when developing with JavaScript.</p>
+				<p>JavaScript is like any other coding language when it comes to logic. The thing that stands out with JavaScript however is how universal it can be. It has many elements that can be used for front-end web development, app development, server stacks and even game engines.</p>
 			</div>
 			<div class="tabs">
 
@@ -126,26 +126,26 @@
 					</div>
 					<hr>
 					<div id="ifElse">
-						<h2>If and Else Statments</h2>
+						<h2>If and Else statements</h2>
 	                    <p>
-	                        If statments are a way to introduce logic into your code.
+	                        If statements are a way to introduce logic into your code.
 							<br>
-							At their code, they are checking to see if the condition is true or false. True will trigger the code inside it, and false will skip it. Unless it has an else statment, in which it will then run the code inside the else.
+							At their core, they are checking to see if the condition is true or false. True will trigger the code inside it, and false will skip it. Unless it has an else statement, in which case it will then run the code inside the else statement.
 	                    </p>
 						<pre class="codeBlock">
 							<code class="language-js">
 								if (test4 == 1) {
-									console.log("test4 is equle to 1");
+									console.log("test4 is equal to 1");
 								}
-								// This will only run if test4 is equle to 1
+								// This will only run if test4 is equal to 1
 
 								if (test4 == 1) {
 									var variableNumber = 2;
 								} else {
 									var variableNumber = 6;
 								}
-								// if test4 is equle 1, variableNumber will then be equle to 2
-								// However this time if test4 does not equle 1, variableNumber will be set to 6
+								// if test4 is equal to 1, variableNumber will then be equal to 2
+								// However, this time if test4 does not equal 1, variableNumber will be set to 6
 								hr
 							</code>
 						</pre>
@@ -156,18 +156,18 @@
 						<p>
 							Conditions are checks that return true or false. They are used to check if the values on either side of them match their condition.
 							<br>
-							They are mainly used in if statments as they do not need to be set to a variable to return a value.
+							They are mainly used in if statements, as they do not need to be set to a variable to return a value.
 						</p>
 						<pre class="codeBlock">
 							<code class="language-js">
 								==  // Checks if the 2 values have the same value
-								=== // Checks is the 2 values have the same value AND the same data type
+								=== // Checks if the 2 values have the same value AND the same data type
 								<   // Checks if the value on the left is less than the value on the right
-								<=  // Checks if the value on the left is less than or equle to the value on the right
+								<=  // Checks if the value on the left is less than or equal to the value on the right
 								>   // Checks if the value on the left is greater than the value on the right
-								>=  // Checks if the value on the left is greater than or equle to the value on the right
-								!=  // Checks if the 2 values DO NOT equle each other
-								!== // Checks if the 2 values DO NOT equle each other AND are not the same data type
+								>=  // Checks if the value on the left is greater than or equal to the value on the right
+								!=  // Checks if the 2 values DO NOT equal each other
+								!== // Checks if the 2 values DO NOT equal each other AND are not the same data type
 							</code>
 						</pre>
 					</div>
@@ -223,9 +223,9 @@
 					<div id="getElementById">
 						<h2>Get Element By Id</h2>
 						<p>
-							The getElementById function does exactly what it says on the title. It gets an HTML element by the id that is passed as a paramater.
+							The getElementById function does exactly what it says in the title. It gets an HTML element by the id that is passed as a parameter.
 							<br>
-							Notice how you dont need to include a # in the paramaters. That is because the function is already looking for an ID and nothing else.
+							Notice how you don't need to include a # in the parameters. That is because the function is already looking for an ID and nothing else.
 							<br>
 							This will only return a single HTML element to then be used or stored in a variable.
 						</p>
@@ -245,11 +245,11 @@
 						<p>
 							Like getElementById, get<span class="importantKeyword">Elements</span>ByClassName function does exactly what it says in the title. It <span class="importantKeyword">gets</span> all the elements it can find with the passed class name.
 							<br>
-							Also like getElementById, it is only looking at the class names. So you dont have to put a full stop (.) in the paramaters.
+							Also like getElementById, it is only looking at the class names. So you don't have to put a full stop (.) in the parameters.
 							<br>
 							So while getElementById returns a single HTML element, getElementsByClassName will return an array of elements. Even it it only finds 1 element, it will still be stored in an array format.
 							<br>
-							This means that for access the elements in your JS code, you either have to loop through the array given to you, so select one of the indevidual elemnts.
+							This means that to access the elements in your JS code, you have to loop through the array given to you to select one of the individual elements.
 						</p>
 						<br>
 						<pre class="codeBlock">
@@ -270,11 +270,11 @@
 					<div id="querySelector">
 						<h2>Query Selector</h2>
 						<p>
-							The querySelector function is a little different from the other two functions. It can select elements from both id and class. However it can also be used for some mroe advances selections of any HTML attributes, including HTML tags themselves.
+							The querySelector function is a little different from the other two functions. It can select elements from both id and class. However it can also be used for some more advanced selections of any HTML attributes, including HTML tags themselves.
 							<br>
-							Unlike getElementsByClassName, querySelector will always return the first element that matches its paramaters. So if you try to select an element by its class name, and there are three elements with the same class name, then it will always return the first one that appears in the HTML code.
+							Unlike getElementsByClassName, querySelector will always return the first element that matches its parameters. So if you try to select an element by its class name, and there are three elements with the same class name, then it will always return the first one that appears in the HTML code.
 							<br>
-							The catch with using querySelector is that it doesnt know what to look for at first. so you have to tell it what type you are trying to select. It basicly runs off the same type of selecting process as CSS. So a class would start with a full stop (.) and an id query will start with a hashtag (#).
+							The catch with using querySelector is that it doesn't know what to look for at first. So you have to tell it what type you are trying to select. It basically runs off the same type of selecting process as CSS. So a class would start with a full stop (.) and an id query will start with a hashtag (#).
 						</p>
 						<br>
 						<pre class="codeBlock">
@@ -291,12 +291,12 @@
 						</pre>
 						<br>
 						<p>
-							querySelector is very powerfull. Basicly any type of selection you can do in CSS, will work for querySelector.
+							querySelector is very powerful. Basically any type of selection you can do in CSS will work for querySelector.
 						</p>
 						<br>
 						<pre class="codeBlock">
 							<code class="language-js">
-								// Select ancor element with a certain href
+								// Select anchor element with a certain href
 								var queryElementAHref = document.querySelector('a[href="page.html"]');
 								// Select header class with a certain data attribute
 								var queryElementClassData = document.querySelector('.header[data-number="3"]');
@@ -309,9 +309,9 @@
 						<p>
 							The querySelectorAll function takes all of the advanced selection features of querySelector, and combines it with the return array feature of getElementsByClassName.
 							<br>
-							This can be very usefull if you need to select multiple reagular HTML elements like images that dont all have the same class and process all of them at the same time.
+							This can be very useful if you need to select multiple reagular HTML elements like images that don't all have the same class and process all of them at the same time.
 							<br>
-							Or for example you have a class that changes the color of some text, but you only want to select all h3 elements with this class and none of the other elements that have the red class.
+							Or for example you have a class that changes the colour of some text, but you only want to select all h3 elements with this class and none of the other elements that have the red class.
 						</p>
 						<pre class="codeBlock">
 							<code class="language-js">
@@ -332,9 +332,9 @@
 					<div id="addEventListener">
 						<h2>Add Event Listener</h2>
 						<p>
-							The addEventListener function allows you to add a custom event to an element. These events will trigger based off the first paramater given, and call the second paramater which ban be a named function or an anonymous function.
+							The addEventListener function allows you to add a custom event to an element. These events will trigger based off the first parameter given, and call the second parameter which can be a named function or an anonymous function.
 							<br>
-							There are alot of different event types that do different thigns. The list of them all can be found here <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">https://www.w3schools.com/jsref/dom_obj_event.asp</a>
+							There are a lot of different event types that do different things. The list of them all can be found here <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">https://www.w3schools.com/jsref/dom_obj_event.asp</a>
 						</p>
 						<br>
 						<pre class="codeBlock">
@@ -349,9 +349,9 @@
 						<p>
 							When assigning a function to the addEventListener, there are two ways to go about it. Adding a named function or adding an anonymous function.
 							<br>
-							When adding a named function, instead of normally adding in the function name and then the brackets, you only need to add the function name. This is because if you add in the brackets, the function will be called even if the event doesnt trigger.
+							When adding a named function, instead of normally adding in the function name and then the brackets, you only need to add the function name. This is because if you add in the brackets, the function will be called even if the event doesn't trigger.
 							<br>
-							The other way is to add an anonymous function. This will allow you to run some code directly inside the event listener. This is also the way that you would use if you needed to pass some paramaters through a function.
+							The other way is to add an anonymous function. This will allow you to run some code directly inside the event listener. This is also the way that you would use if you needed to pass some parameters through a function.
 						</p>
 						<br>
 						<pre class="codeBlock">
@@ -383,7 +383,7 @@
 					<div id="click">
 						<h2>Click</h2>
 						<p>
-							The click event will trigger whenever the element is clicked. This can be a button, a span or even a div. However, even though that event may new be clickable, it does not change the mouse cursor to the pointer.
+							The click event will trigger whenever the element is clicked. This can be a button, a span or even a div. However, even though that event may be clickable, it does not change the mouse cursor to the pointer.
 						</p>
 						<br>
 						<pre class="codeBlock">
@@ -397,7 +397,7 @@
 					<div id="input">
 						<h2>Input</h2>
 						<p>
-							The input event will trigger whenever an input element has user input. This event is only useful for all the input types, and the textarea HTML elememnts.
+							The input event will trigger whenever an input element has user input. This event is only useful for all the input types and the textarea HTML elements.
 						</p>
 						<br>
 						<pre class="codeBlock">
@@ -411,7 +411,7 @@
 					<div id="change">
 						<h2>Change</h2>
 						<p>
-							The change event is very simaler to the input type. However instead of triggering the event when the value is changed, it get triggered when the value is <span class="importantKeyword">finished</span> being changed (or the elemtn losed focus)
+							The change event is very similar to the input type. However, instead of triggering the event when the value is changed, it gets triggered when the value is <span class="importantKeyword">finished</span> being changed (or the element loses focus)
 						</p>
 						<br>
 						<pre class="codeBlock">
@@ -426,12 +426,12 @@
 					<div id="functionStructure">
 						<h2>Function Structure</h2>
 						<p>
-							Functions are the main building blocks of almost any coding language. They all pretty much have the same format as well of:
+							Functions are the main building blocks of almost any coding language. They all pretty much have the same format as well as:
 							<ul>
 								<li>Having the ability to be named or anonymous</li>
-								<li>Having the ability to have paramaters</li>
+								<li>Having the ability to have parameters</li>
 								<li>Having their own variable scope</li>
-								<li>Alowing the ability to return a value to be used outside of its self</li>
+								<li>Allowing the ability to return a value to be used outside of itself</li>
 							</ul>
 						</p>
 						<br>
@@ -446,12 +446,12 @@
 						</pre>
 					</div>
 					<hr>
-					<div id="paramaters">
-						<h2>Paramaters</h2>
+					<div id="Parameters">
+						<h2>Parameters</h2>
 						<p>
-							The paramaters of a function act just like normal variables. What is special about them is that they can only be used inside the function they are made in and they need to be present when calling the function or else they will call an error.
+							The parameters of a function act just like normal variables. What is special about them is that they can only be used inside the function they are made in. Also, they need to be present when calling the function or else they will call an error.
 							<br>
-							When making the paramaters, you dont need to include the var at the start like a normal variable. doing this will cause an error.
+							When making the parameters, you don't need to include the var at the start like a normal variable. Doing this will cause an error.
 						</p>
 						<br>
 						<pre class="codeBlock">
@@ -474,7 +474,7 @@
 					<div id="return">
 						<h2>Return</h2>
 						<p>
-							The return statment allows the function to return a value to the line that called it. It can also be used for stopping a function early.
+							The return statement allows the function to return a value to the line that called it. It can also be used for stopping a function early.
 						</p>
 						<pre class="codeBlock">
 							<code class="language-js">
@@ -483,7 +483,7 @@
 									return "Hello " + person + ". " + message;
 								}
 
-								// Storing the functions return value
+								// Storing the function's return value
 								var result = messageFunction('James', 'How are you doing?');
 								console.log(result);
 								// This will output 'Hello James. How are you doing?'
@@ -495,11 +495,11 @@
 					<div id="loopStructure">
 						<h2>For Loop Structure</h2>
 						<p>
-							The for loop is the simplest way to make a loop in JavaScript. It can be used for many differnet things, but the most common is for iterating over an array.
+							The for loop is the simplest way to make a loop in JavaScript. It can be used for many different things, but the most common is for iterating over an array.
 							<br>
 							The structure of the for loop is split into 4 parts:
 							<ul>
-								<li>The statment</li>
+								<li>The statement</li>
 								<li>The variable</li>
 								<li>The condition</li>
 								<li>What happens after an iteration</li>
@@ -523,7 +523,7 @@
 					<div id="break">
 						<h2>Break</h2>
 						<p>
-							The break statment is used if you need to stop the loop early. It is recomended to put your break inside an if statment so that your loop doesnt just finish after the first iteration.
+							The break statement is used if you need to stop the loop early. It is recommended to put your break inside an if statement so that your loop doesn't just finish after the first iteration.
 						</p>
 						<br>
 						<pre class="codeBlock">
